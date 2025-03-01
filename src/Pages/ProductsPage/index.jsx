@@ -21,7 +21,6 @@ import {
 } from "@mui/material";
 import { Edit, Delete, Add, PhotoCamera } from "@mui/icons-material";
 
-// Sample Product Data
 const initialProducts = [
   { id: 1, name: "Laptop", price: 1200, category: "Electronics", images: [] },
   { id: 2, name: "Phone", price: 800, category: "Electronics", images: [] },

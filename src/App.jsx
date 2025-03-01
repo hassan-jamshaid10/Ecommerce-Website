@@ -6,10 +6,8 @@ import LoginPage from "../src/Authentication/LoginPage/index";
 import SignupPage from "../src/Authentication/SignupPage/index";
 import ForgotPassword from "./Authentication/ForgotPassword";
 import ResetPassword from "./Authentication/ResetPassword";
+import ProductsPage from "./Pages/ProductsPage";
 
-
-
-const ProductsPage = lazy(() => import("./Pages/ProductsPage"));
 const OrdersPage = lazy(() => import("./Pages/OrdersPage"));
 const CouponsPage = lazy(() => import("./Pages/CouponsPage"));
 const SettingsPage = lazy(() => import("./Pages/SettingsPage"));
@@ -17,14 +15,13 @@ const SettingsPage = lazy(() => import("./Pages/SettingsPage"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <SidebarLayout />,
-    children: [
-      { index: true, element: <DashboardHome /> },
-      { path: "products", element: <ProductsPage /> },
-      { path: "orders", element: <OrdersPage /> },
-      { path: "coupons", element: <CouponsPage /> },
-      { path: "settings", element: <SettingsPage /> }
-    ],
+    element: <SidebarLayout ><DashboardHome/></SidebarLayout>,
+
+  },
+  {
+    path: "/products",
+    element: <SidebarLayout><ProductsPage/></SidebarLayout> ,
+
   },
   {
     path: "/Auth/Login",
